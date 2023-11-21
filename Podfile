@@ -13,3 +13,8 @@ end
 target 'NotificationService' do
    pod 'WebEngageBannerPush'
 end
+
+# ContentExtension Target
+target 'NotificationViewController' do
+  pod 'WebEngageAppEx/ContentExtension'
+end
