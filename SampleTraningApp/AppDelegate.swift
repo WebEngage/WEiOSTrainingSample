@@ -39,4 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: WEGAppDelegate {
+    func wegHandleDeeplink(_ deeplink: String!, userData data: [AnyHashable : Any]!) {
+     print("Push Notification Clicked...")
+    }
+
+}
+
+
 
