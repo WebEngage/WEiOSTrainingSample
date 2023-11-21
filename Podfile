@@ -8,3 +8,8 @@ target 'SampleTraningApp' do
   pod 'WebEngage'
 
 end
+
+# ServiceExtension Target
+target 'NotificationService' do
+   pod 'WebEngageBannerPush'
+end
