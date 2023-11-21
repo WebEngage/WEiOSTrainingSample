@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        WebEngage.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
-
+        WebEngage.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions, notificationDelegate: self)
         return true
     }
 
@@ -39,4 +37,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: WEGInAppNotificationProtocol {
+
+    func notificationPrepared(_ inAppNotificationData: [String: Any]!,
+                              shouldStop stopRendering: UnsafeMutablePointer<ObjCBool>!) -> [AnyHashable: Any]! {
+        print("Notification Prepared : ", inAppNotificationData ?? -1)
+        return inAppNotificationData
+    }
+
+    func notificationShown(_ inAppNotificationData: [String: Any]!) {
+        print("Notification Shown : ", inAppNotificationData ?? -1)
+    }
+
+    func notification(_ inAppNotificationData: [String: Any]!, clickedWithAction actionId: String!) {
+        print("Notification Clicked : ", inAppNotificationData ?? -1)
+    }
+
+    func notificationDismissed(_ inAppNotificationData: [String: Any]!) {
+        print("Notification Dismissed : ", inAppNotificationData ?? -1)
+    }
+}
 

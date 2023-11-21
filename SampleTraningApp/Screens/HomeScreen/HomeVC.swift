@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebEngage
 
 class HomeVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
@@ -43,6 +44,7 @@ class HomeVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var categoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebEngage.sharedInstance().analytics.navigatingToScreen(withName: "Home")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
