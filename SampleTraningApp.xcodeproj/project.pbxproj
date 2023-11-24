@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33CBA7BC8CAA64F46964F3A9 /* Pods_SampleTraningApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46519C14E0CEBC0614B1498 /* Pods_SampleTraningApp.framework */; };
+		59C1E9E8C9A9C6EB02669159 /* libPods-SampleTraningApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A367D76CB8036C070F58C6 /* libPods-SampleTraningApp.a */; };
 		CE1110492AF14AF00054F62C /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1110482AF14AF00054F62C /* CartVC.swift */; };
 		CE11105D2AF1943D0054F62C /* CategoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105C2AF1943D0054F62C /* CategoryTableCell.swift */; };
 		CE11105F2AF1946A0054F62C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11105E2AF1946A0054F62C /* ProductCell.swift */; };
@@ -63,7 +63,7 @@
 		CE2071652AF0D7FA0010E919 /* UISliderX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderX.swift; sourceTree = "<group>"; };
 		CE2071732AF0E1630010E919 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CE2071852AF145D40010E919 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
-		F46519C14E0CEBC0614B1498 /* Pods_SampleTraningApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTraningApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A367D76CB8036C070F58C6 /* libPods-SampleTraningApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleTraningApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33CBA7BC8CAA64F46964F3A9 /* Pods_SampleTraningApp.framework in Frameworks */,
+				59C1E9E8C9A9C6EB02669159 /* libPods-SampleTraningApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,6 @@
 				BAB08DBB5A4C570823B2F052 /* Pods-SampleTraningApp.debug.xcconfig */,
 				C492397369C7CFE5DC41A888 /* Pods-SampleTraningApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -173,7 +172,7 @@
 		EE2885B03A9E9F50D2A70FED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F46519C14E0CEBC0614B1498 /* Pods_SampleTraningApp.framework */,
+				D5A367D76CB8036C070F58C6 /* libPods-SampleTraningApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 				CE20713F2AF0D5950010E919 /* Sources */,
 				CE2071402AF0D5950010E919 /* Frameworks */,
 				CE2071412AF0D5950010E919 /* Resources */,
+				73B1D8DB67C5B8FCEF09BC00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +266,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73B1D8DB67C5B8FCEF09BC00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleTraningApp/Pods-SampleTraningApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleTraningApp/Pods-SampleTraningApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleTraningApp/Pods-SampleTraningApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -449,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7X7V9YPX7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleTraningApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7X7V9YPX7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleTraningApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

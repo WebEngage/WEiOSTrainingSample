@@ -6,5 +6,6 @@ target 'SampleTraningApp' do
   # Pods for SampleTraningApp
   
   pod 'WebEngage'
+  pod 'WEPersonalization'
 
 end

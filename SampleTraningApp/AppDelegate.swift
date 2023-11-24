@@ -7,6 +7,7 @@
 
 import UIKit
 import WebEngage
+import WEPersonalization
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         WebEngage.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
-
+        WEPersonalization.shared.initialise()
         return true
     }
 

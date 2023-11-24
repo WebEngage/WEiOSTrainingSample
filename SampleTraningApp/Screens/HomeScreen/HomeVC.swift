@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import WebEngage
+import WEPersonalization
 
 class HomeVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
@@ -43,6 +45,13 @@ class HomeVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var categoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebEngage.sharedInstance().user.login("sn_abc")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        WebEngage.sharedInstance().analytics.navigatingToScreen(withName: "Home")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +62,6 @@ class HomeVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryTableCell
         let cellData = categories[indexPath.row]
         cell.configure(data: cellData)
-        
         return cell
     }
     
