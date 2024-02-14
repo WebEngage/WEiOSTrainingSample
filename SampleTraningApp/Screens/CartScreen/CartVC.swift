@@ -9,6 +9,7 @@ import UIKit
 
 class CartVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    @IBOutlet weak var buyNowButtonStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     var cartItems:[Product] = []
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class CartVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        buyNowButtonStackView.isHidden = (cartItems.count == 0) ? true : false
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cartItems.count
