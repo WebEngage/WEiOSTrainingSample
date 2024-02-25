@@ -90,3 +90,5 @@ fastlane/test_output
 iOSInjectionProject/
 Pods
 Podfile.lock
+SampleTraningApp.xcworkspace/contents.xcworkspacedata
+SampleTraningApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
