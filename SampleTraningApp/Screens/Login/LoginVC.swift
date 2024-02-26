@@ -48,6 +48,9 @@ class LoginVC: UIViewController {
             userIdTextField.isHidden = true
             passwordTextField.isHidden = true
             loginButton.setTitle("Logout", for: .normal)
+            if let cuid = UserDefaults.standard.string(forKey: "cuid") as? String{
+                loggedInUserLabel.text = "Welcome \(cuid), to the Shopping festival..!!"
+            }
         } else{
             loggedInUserLabel.isHidden = true
             userIdTextField.isHidden = false
